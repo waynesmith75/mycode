@@ -2,22 +2,26 @@
 
 message = "Your internet service is "
 
-connection = float( input("What is your internet service speed in Mbps?"))
+connection = input("What is your internet service speed in Mbps?")
 
 
 if connection=="":
     print("You didn't provide any input.")
+    exit()
+
+if float(connection) == float:
+    connection = int(round(connection))
+
+connection_int = int(connection)
 
 
-
-
-if  connection >= 500:
+if  connection_int >= 500:
     message = message + "awesome!"
-elif connection >= 250:
+elif connection_int >= 250:
     message = message + "steller."
-elif connection >= 100:
+elif connection_int >= 100:
     message = message + "not bad."
-elif connection >= 25:
+elif connection_int >= 25:
     message = message + "barely considered broadband."
 else:
     message = message + "not sufficient. Find another provider."
