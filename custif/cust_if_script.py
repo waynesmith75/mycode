@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 
-message = "Your internet service is " # The movie is about to begin, we recommed "
+message = "Your internet service is "
 
-# wrap connection in a Float() to accept decimals as numbers
-connection = float(input("What is your connection speed in Mbps?"))
+connection = float( input("What is your internet service speed in Mbps?"))
 
-#if input value was higher or equal to 25
-if connection >= 500:
+
+if connection=="":
+    print("You didn't provide any input.")
+
+
+
+
+if  connection >= 500:
     message = message + "awesome!"
 elif connection >= 250:
     message = message + "steller."
@@ -15,7 +20,7 @@ elif connection >= 100:
 elif connection >= 25:
     message = message + "barely considered broadband."
 else:
-    message = message + "not sufficient. We recommend finding a new provider."
+    message = message + "not sufficient. Find another provider."
 print(message)
 
 
